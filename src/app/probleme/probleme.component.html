@@ -39,6 +39,47 @@
 </span> 
             </div>
           </div>
+          <div class="form-group row">          
+            <label for="nomId" class="col-md-2 col-form-label text-right">Nom :</label>
+            <div class="col-md-10">
+              <input class="form-control" 
+              id="nomId" 
+              type="text" 
+              placeholder="Votre nom ici (obligatoire)" 
+              formControlName="nom"  
+              />
+            </div>
+          </div>
+          <!-- Zone de liste déroulante TYPE DE PROBLÈME -->
+<div class="form-group row">
+  <label for="noTypeProblemeId" class="col-md-2 col-form-label text-right">Type de problème :</label>
+  <div class="col-md-10">
+  <select class="form-control"
+  id="noTypeProblemeId"
+  formControlName="noTypeProbleme"
+  [ngClass]="{'is-valid': (problemeForm.get('noTypeProbleme').touched || 
+  problemeForm.get('noTypeProbleme').dirty) &&
+  problemeForm.get('noTypeProbleme').valid,
+  'is-invalid': (problemeForm.get('noTypeProbleme').touched || 
+  problemeForm.get('noTypeProbleme').dirty) &&
+  !problemeForm.get('noTypeProbleme').valid}"
+
+  >
+
+  <option value="">Sélectionner un type de problème (obligatoire) ...</option>
+  <option *ngFor="let tp of typesproblemeProbleme" [value]="tp.id">{{tp.descriptionTypeProbleme}}</option>
+  </select>
+  <span class="form-text" *ngIf="(problemeForm.get('noTypeProbleme').touched ||
+  problemeForm.get('noTypeProbleme').dirty) &&
+  problemeForm.get('noTypeProbleme').errors">
+  <span *ngIf="problemeForm.get('noTypeProbleme').errors['required']">
+  <small class="text-muted">
+  Merci de sélectionner un type de problème.
+  </small>
+  </span>
+  </span>
+  </div>
+  </div>
           </form>
         </div>
   <div class="card-footer">

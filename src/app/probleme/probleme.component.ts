@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { VerifierCaracteresValidator } from '../shared/longueur-minimum/longueur-minimum.component';
-
+import { ITypeProbleme } from './typesprobleme';
+import { TypesproblemeService } from './typesprobleme.service';
 
 @Component({
   selector: 'Inter-probleme',
@@ -11,7 +12,10 @@ import { VerifierCaracteresValidator } from '../shared/longueur-minimum/longueur
 export class ProblemeComponent implements OnInit {
   problemeForm: FormGroup;
   
-  constructor(private fb:FormBuilder) { }
+  typesproblemeProbleme: ITypeProbleme[]
+  errorMessage: string; 
+  constructor(private fb:FormBuilder, private typesprobleme: TypesproblemeService) { }
+  
   save(): void {
   }
   ngOnInit()  {
@@ -20,6 +24,9 @@ export class ProblemeComponent implements OnInit {
     ({
       prenom: ['',[VerifierCaracteresValidator.longueurMinimum(3),Validators.required]]
     });
+    this.typesprobleme.obtenirTypesprobleme()
+    .subscribe(tp => this.typesproblemeProbleme = tp,
+               error => this.errorMessage = <any>error); 
   }
 
 }

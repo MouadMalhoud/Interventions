@@ -7,6 +7,10 @@ import { AccueilComponent } from './accueil/accueil.component';
 import { ProblemeComponent } from './probleme/probleme.component';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { ProblemeData } from './probleme/probleme-data';
+import { TypesproblemeService } from './probleme/typesprobleme.service';
 /* import { PrenomComponent } from './prenom/prenom.component';
  */
 @NgModule({
@@ -14,13 +18,15 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppComponent,
     AccueilComponent,
     ProblemeComponent,
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule .forRoot(ProblemeData, { delay:1000 })
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [TypesproblemeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
