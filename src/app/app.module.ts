@@ -17,14 +17,14 @@ import { TypesproblemeService } from './probleme/typesprobleme.service';
   declarations: [
     AppComponent,
     AccueilComponent,
-    ProblemeComponent,
-    HttpClientModule,
-    HttpClientInMemoryWebApiModule .forRoot(ProblemeData, { delay:1000 })
+    ProblemeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,    
+    HttpClientModule,
+    HttpClientInMemoryWebApiModule .forRoot(ProblemeData, { delay:1000 })
   ],
   providers: [TypesproblemeService],
   bootstrap: [AppComponent]
