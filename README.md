@@ -12,9 +12,12 @@ Swagger UI : Swagger UI allows anyone — be it your development team or your en
 
 UML Diagrams : 
 
-
+Detailed diagram : 
 [Diagramme détaillé du cas d'utilisation.pdf](https://github.com/MouadMalhoud/Interventions/files/12571061/Diagramme.detaille.du.cas.d.utilisation.pdf)
+
+General case diagram : 
 [Diagramme de cas d'utilisation général.pdf](https://github.com/MouadMalhoud/Interventions/files/12571060/Diagramme.de.cas.d.utilisation.general.pdf)
+
 ![08BoutonSauvegarder](https://github.com/MouadMalhoud/Interventions/assets/89527173/46ca3f68-c4d8-4973-b5bf-c9e2eb1eb65a)
 ![07DescritpionProbleme](https://github.com/MouadMalhoud/Interventions/assets/89527173/3464b6da-aee7-4ea6-8a7d-1aafed1de955)
 ![05ZoneTexteCourrielConfirmation](https://github.com/MouadMalhoud/Interventions/assets/89527173/f03cf5a6-0114-4ca6-87d2-b7992d6c8d32)
