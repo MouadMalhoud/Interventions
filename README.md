@@ -1,7 +1,7 @@
-The project is a simple form where you can declare real life common problems (ex: declare broken problems for employees. They can get a notification when it's repaired or replacable). It tests text fields with validators.
+The project is a simple form where you can declare real life common problems (ex: declare problems for employees. They can get a notification when it's repaired or replacable). It tests text fields with validators.
 Nothing to fancy just to play around with an API and swaggerUI. This was also an opportunity to make UML diagrams.
 
-Swagger UI : Swagger UI allows anyone — be it your development team or your end consumers — to visualize and interact with the API's resources without having any of the implementation logic in place.
+Swagger UI : Swagger UI allows anyone — be it your development team or your end consumers — to visualize and interact with the API's resources without having any of the implementation logic in place (JSON).
 
 
 ![FormDeclarationProbleme2](https://github.com/MouadMalhoud/Interventions/assets/89527173/456da10e-4d35-49c9-8870-55f1b1f27b80)
